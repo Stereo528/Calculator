@@ -46,15 +46,31 @@ public class Calculator {
         x = input.nextInt();
         System.out.println(x * x);
     }
-    static void sqroot(){
+    static void sqroot() {
         Scanner input = new Scanner(System.in);
         int x;
         System.out.println("Choose a number");
         x = input.nextInt();
         System.out.println(sqrt(x));
     }
+    static void abval(){
+            Scanner input = new Scanner(System.in);
+            int x;
+            System.out.println("Choose a number");
+            x = input.nextInt();
+            System.out.println(Math.abs(x));
+    }
+    static void power(){
+        Scanner input = new Scanner(System.in);
+        int x, y;
+        System.out.println("Choose a number");
+        x = input.nextInt();
+        System.out.println("Choose another number");
+        y = input.nextInt();
+        System.out.println(Math.pow(x,y));
+    }
     public static void main(String[] args) {
-        System.out.println("add(1), subtract(2), multiply(3), divide(4), square(5), Square root(6), quit(0): ");
+        System.out.println("add(1), subtract(2), multiply(3), divide(4), square(5), Square root(6), AbVal(7), Powers(8), quit(0): ");
         Scanner input = new Scanner(System.in);
         int operation, x;
         operation = input.nextInt();
@@ -85,8 +101,16 @@ public class Calculator {
             case 6:
                 sqroot();
                 break;
+            case 7:
+                abval();
+                break;
+            case 8:
+                power();
+                break;
             default:
                 System.out.println("Not a Valid Option");
         }
+
+        input.close();
     }
 }
