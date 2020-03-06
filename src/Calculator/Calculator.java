@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.Math.sqrt;
 
 public class Calculator {
-    static void Add(){
+    static void add(){
         Scanner input = new Scanner(System.in);
         int x, y;
         int random = (int)(Math.random() * 5 + 1);
@@ -20,7 +20,7 @@ public class Calculator {
             System.out.println(0/0);
         }
     }
-    static void Sub(){
+    static void sub(){
         Scanner input = new Scanner(System.in);
         int x, y;
         System.out.println("Choose a number");
@@ -29,7 +29,7 @@ public class Calculator {
         y = input.nextInt();
         System.out.println(x - y);
     }
-    static void Mul() {
+    static void mul() {
         Scanner input = new Scanner(System.in);
         int x, y;
         System.out.println("Choose a number");
@@ -86,13 +86,13 @@ public class Calculator {
             case "quit":
                     break;
             case "add":
-                Add();
+                add();
                 break;
             case "subtract":
-                Sub();
+                sub();
                 break;
             case "multiply":
-                Mul();
+                mul();
                 break;
             case "divide":
                 div();
